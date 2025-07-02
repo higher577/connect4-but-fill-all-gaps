@@ -182,7 +182,7 @@ class FourInARow:
     def __init__(self, size):
         self.board = GameBoard(size)
     def play(self):
-        print("*****************NEW GAME*****************", "Type '999' to peak")
+        print("*****************NEW GAME*****************", "Type '999' to peak the Computer's move")
         self.board.display()
         player_number = 0
         print()
@@ -199,7 +199,7 @@ class FourInARow:
                         if (column < 0) or (column >= self.board.size) or (column == 999):
                             if column == 999: #peak
                                 
-                                # Choose move which maximises new points for computer player
+                                # Choose move which maximises new points for computer (player 2)
                                 (best_column, max_points) = self.board.column_resulting_in_max_points(2)
                                 if max_points > 0:
                                     iii = best_column
@@ -212,7 +212,7 @@ class FourInARow:
                                         # if no opponent move creates new points then choose column as close to middle as possible
                                         iii = self.board.free_slots_as_close_to_middle_as_possible()[0]
                                 
-                                print("For the current board, AI is likely to go for column", iii)
+                                print("For the current board, the Computer is likely to go for column", iii)
                                 
                             else:
                                 print("Input must be an integer in the range 0 to ", self.board.size - 1)
@@ -238,7 +238,7 @@ class FourInARow:
 
                 self.board.add(column, player_number + 1)
                 
-                print("The AI chooses column ", column)
+                print("The Computer chooses column ", column)
             self.board.display()   
             player_number = (player_number+1) % 2
         if (self.board.points[0] > self.board.points[1]):
