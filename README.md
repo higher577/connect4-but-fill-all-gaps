@@ -16,10 +16,10 @@ User inputs ‘999’ to the slot instead of column inputs allowed, this will al
 From current game board, the code calculates the next best move and tells the player what column the computer will take next.
 
 
-A problem faced when coding, was when the computer gave a different input to what it said:
+A problem faced when coding, was when the computer ('AI') gave a different input to what it said:
 ![image](https://github.com/user-attachments/assets/d8e0d862-8682-4ab9-befe-8f93df129ac0)
 
 I was confused and thought the code was wrong, however, I found out that the computer chooses the best possible moves, and it changes constantly. 
 The computer's prediction changes depending on what input the user puts in, so the prediction can be wrong as in the above case.
-The calculation changed as the user puts in a counter in column 1.
+The calculation changed after the user puts in a counter in column 1.
 I did not see any way to predict the user’s input which will affect the computer’s choice in the next step, so I decided to give a warning to the player, by changing the quote with meaning that prediction is a possibility.
