@@ -3,7 +3,7 @@ Inspired by a university project. This version was reimplemented independently.
 Worked with python on IDLE.
 
 When the program is executed, the prompt will ask "Please input slot:" with the connect 4 board displayed, the user will play by inputing the numbers on the board.
-The game rule is similar to "Connect 4", however the game finishes after all the gaps has been filled up to the brim, the player with the most points (most groups of 4) wins.
+The game rule is similar to "Connect 4", however instead of stopping when there is the first 'connect 4', the game continues and finishes after all the gaps has been filled up to the brim, the player with the most points (most groups of 4) wins.
 The user (Player 1, circle 'o') will verse the computer (Player 2, crosses 'x'), where its algorithm sees which columns (slot) can be slotted, and finds which column result in maximum points, 
 and if the multiple column gives equal maxmum points, the priority goes to the column as close to the middle of the board.
 
